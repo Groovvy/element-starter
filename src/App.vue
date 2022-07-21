@@ -18,7 +18,7 @@
             prop="steam">
           <template slot-scope="scope">
             {{ scope.row.steam }}
-            <el-button icon="el-icon-document-copy" circle @click="copyValue(scope.row.steam)"></el-button>
+            <el-button icon="el-icon-document-copy" size="small" circle @click="copyValue(scope.row.steam)"></el-button>
           </template>
         </el-table-column>
         <el-table-column
@@ -26,7 +26,7 @@
             prop="email">
           <template slot-scope="scope">
             {{ scope.row.email }}
-            <el-button icon="el-icon-link" circle @click="toEmailLogin(scope.row.email)"></el-button>
+            <el-button icon="el-icon-link" size="small" circle @click="toEmailLogin(scope.row.email)"></el-button>
           </template>
         </el-table-column>
         <el-table-column
@@ -71,7 +71,7 @@ export default {
       keywords: '',
       tableLoading: true,
       currentPage: 1,
-      pageSize:8,
+      pageSize: 8,
       totalSize: 0,
       paginationData: []
     }
@@ -80,7 +80,7 @@ export default {
     //this.$axios.get('https://mock.apifox.cn/m1/989716-0-default/api/account').then(response => (this.tableData = response.data, this.tableLoading = false));
     this.tableList(1, null)
   },
-  watch: { //监听搜索框内容，当搜索框内容发生变化时调用searchResource方法
+  watch: { //监听搜索框内容
     keywords: {
       handler() {
         this.tableList(1, this.keywords)
@@ -175,5 +175,4 @@ export default {
   padding-top: 10px;
   text-align: center;
 }
-
 </style>
