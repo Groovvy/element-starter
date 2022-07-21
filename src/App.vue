@@ -100,7 +100,7 @@ export default {
       this.$axios.get('https://mock.apifox.cn/m1/989716-0-default/api/account').then(function (response) {
         if (keyword != null && keyword !== '') {
           response.data = response.data.filter(item => {
-            return item.nickname.includes(keyword)
+            return item.nickname.toLowerCase().includes(keyword.toLowerCase())
           })
         }
         that.totalSize = response.data.length
