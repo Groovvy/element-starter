@@ -56,7 +56,7 @@
       <el-pagination
           @current-change="handleCurrentChange"
           :current-page.sync="currentPage"
-          :page-size="5"
+          :page-size="pageSize"
           layout="total, prev, pager, next, jumper"
           :total="totalSize">
       </el-pagination>
@@ -71,7 +71,7 @@ export default {
       keywords: '',
       tableLoading: true,
       currentPage: 1,
-      pageSize: 8,
+      pageSize: 10,
       totalSize: 0,
       paginationData: []
     }
