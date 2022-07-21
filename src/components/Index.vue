@@ -1,6 +1,5 @@
 <template>
   <div>
-    <router-link to="/page1">Go to Foo</router-link>
     <div>
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item>
