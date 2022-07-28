@@ -18,7 +18,9 @@
             prop="steam">
           <template slot-scope="scope">
             {{ scope.row.steam }}
-            <el-button icon="el-icon-document-copy" size="small" circle @click="copyValue(scope.row.steam)"></el-button>
+            <el-tooltip class="item" effect="dark" content="复制" placement="right">
+              <el-button icon="el-icon-document-copy" size="small" circle @click="copyValue(scope.row.steam)"></el-button>
+            </el-tooltip>
           </template>
         </el-table-column>
         <el-table-column
@@ -26,7 +28,9 @@
             prop="email">
           <template slot-scope="scope">
             {{ scope.row.email }}
-            <el-button icon="el-icon-link" size="small" circle @click="toEmailLogin(scope.row.email)"></el-button>
+            <el-tooltip class="item" effect="dark" content="复制并跳转" placement="right">
+              <el-button icon="el-icon-link" size="small" circle @click="toEmailLogin(scope.row.email)"></el-button>
+            </el-tooltip>
           </template>
         </el-table-column>
         <el-table-column
