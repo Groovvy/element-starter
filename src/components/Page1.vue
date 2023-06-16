@@ -83,11 +83,14 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$refs['ruleForm'].validate((valid) => {
+      var res = this.$refs['ruleForm'].validate((valid) => {
         if (!valid) {
           return false;
         }
       });
+      if(!res){
+        return;
+      }
       let profit = 0;
       if (!this.form.showPromo) {
         profit = this.form.sales - (this.form.huilv * this.form.dollar) - this.form.carriage - this.form.delivery;
