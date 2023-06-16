@@ -99,7 +99,6 @@ export default {
       this.tableList(val, this.keywords)
     },
     tableList(val, keyword) {
-      debugger
       let that = this
       this.$axios.get('https://mock.apifox.cn/m1/989716-0-default/api/account').then(function (response) {
         if (keyword != null && keyword !== '') {
@@ -149,7 +148,6 @@ export default {
         this.$axios.get('https://mock.apifox.cn/m1/989716-0-default/api/auth')
             .then(function (res) {
               // 请求成功
-              debugger
               if (value !== res.data.auth + '') {
                 that.$message.error('口令错误');
                 return;
