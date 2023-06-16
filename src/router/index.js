@@ -13,7 +13,7 @@ const router = new VueRouter({
             component: Index,
         },
         {
-            path: '/page1',
+            path: '/cal',
             component: Page1,
         }
     ]
