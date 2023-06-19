@@ -83,8 +83,10 @@ export default {
   },
   methods: {
     submitForm() {
-      var res = this.$refs['ruleForm'].validate((valid) => {
+      let res = true;
+          this.$refs['ruleForm'].validate((valid) => {
         if (!valid) {
+          res = false;
           return false;
         }
       });
